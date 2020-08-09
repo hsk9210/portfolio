@@ -147,6 +147,11 @@
  * 요소의 data type도 가리지 않음. string만 쓰는 배열, number만 쓰는 배열 이런거 없다.
  * 심지어 숫자가 아닌 키나 분수, 음수 key도 가능.(하지만 절대 피하자. 개인 PJ에서도 금물급;)
  * 
+ * RegExp, Map과 Set 등은 후반부 설명(정규식 + 자료구조는 후반부가 국룰)
+ * 
+ * number와 string 사이 형변환 메소드나 테크닉은 숙지할 것.
+ * let number1 = Number(바꿀 문자열); //단, 저건 숫자값을 만드는 것이지 인스턴스는 아니다!
+ * 또는 parseInt 나 parseFloat를 사용하는 방법도 있다.
  * 
  * 
  */
@@ -222,4 +227,5 @@ console.log(a1.length); //length는 여기서도 먹힌다.
 console.log(a3[1]); //이러면 "U r the Worst"가 나올 것이다.
 console.log(a2[a2.length-1]); //배열은 0부터 시작, 마지막 index는 length-1 === null 저장된 게 나온다.(undefined면 로직 잘못된거.)
 a4[2] = 4;
+
 
