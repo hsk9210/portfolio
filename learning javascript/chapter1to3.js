@@ -229,3 +229,5 @@ console.log(a2[a2.length-1]); //배열은 0부터 시작, 마지막 index는 len
 a4[2] = 4;
 
 
+console.log(sadfdsdsfa);
+
