@@ -57,41 +57,70 @@ function removeElement(arr, discarder) {
   console.log(output);
 
 /////////////
+let s = 'hello';
+s.toUpperCase();
+console.log(s);
+console.log(s.toUpperCase());
+//이것은 js가 일시적인 String객체를 만든 것.
+//이 임시 객체에 toUpperCase함수가 들어있다.
+s.rating = 3;
+console.log(s.rating);
 
-  function getIndex(arr, num) {
-    // TODO: 여기에 코드를 작성합니다.
-    //1. 꿀벌. 복사해서.
-    let arr1 = Array.from(arr);
-    //2. 넣을게
-    arr1.push(num);
-    //2.1 일단 답을 넣을 빈 배열이 이번에도 필요한가.
-    let answer = [];
-    //3. 정렬(?)
-    //???
-    //3.1 일단 반복문을 써본다.
-    arr1.forEach(function(element){
-      if(element > ){
-  
-      }
-    }); //망.
-    //3.2 가장 큰 수를 하나씩만 뽑아서 넣는 방식으로도 정렬은 된다?
-    //Math.max.apply();
-    //var test = [0, 77, 33, 11, 99, 88, 55];
-    //Math.max.apply(null, test); //결과값은 99
-    arr1.forEach(function(element){
-      let a = Math.max.apply(null, arr); //이러면 그래도 하나씩만 들어가버린다...
-      if(forEach문 돌리면서 비교할 수단?)
-  
-    })
-  
-    //4. num의 인덱스 리턴.
-    const isTheNum = (element) => element === num; //num과 일치하는 요소를 배열에서 찾고,
-    let a = arr1.findindex(isTheNum); //배열에서 일치하는 요소에 대한 인덱스를 반환해서,
-    return arr1[a]; //그걸 반환한다.
-    
-  }
-  /*
-  arr1.forEach(function(element, index, array){
-      console.log(`${array}의 ${index}번째 요소 : ${element}`);
-  });
-  */
+//자칭... 극히 간단한 이메일 정규표현식
+const email = /\b[a-z0-9._-]+@[a-z_-]+(?:\.[a-z]+)+\b/;
+/**
+ * 문자열을 숫자로 바꿔야 할 경우가 있습니다.
+ * html 환경상 받은 입력은 보통 문자열이고,
+ * js에서는 문자열을 숫자로 바꾸는 방법이 몇 가지 있습니다.
+ * 첫번째, Number 객체 생성자 사용. 
+ */
+let numStr = "33.3";
+let num = Number(numStr); //이 행은 숫자 값 을 만드는 것이다.
+//Number 객체의 인스턴스가 아님!
+console.log(numStr);
+console.log(num);
+//숫자로 바꿀 수 없는 문자열에서는 NaN이 반환된다.
+
+
+/**
+ * 두번째 방법.
+ * 내장 함수인 parseInt나 parseFloat 함수를 사용하는 방법.
+ * 이들은 Number 생성자와 비슷하게 동작하지만 몇가지 다른점이 보이는게,
+ * parseInt를 사용할 때는 기수(radix도 넘길 수 있다?)
+ */
+
+ //주의 : 여기부터는 원격 데스크톱으로 윈도우즈 -> 맥미니로 연결해서 코딩중.
+
+let a = parseInt('16 volts', 10);
+let b = Number("3a");
+let c  =parseFloat("15.5inch");
+console.log(a);
+console.log(b);
+console.log(c);
+//Date 객체를 숫자로 바꿀 때는 valueOf() 메소드 사용
+//이거는 일반적으로 UTC 1970년 1월 1일 자정으로부터 몇 밀리초가 지났는지 나타내는 숫자.
+let d = new Date(); //현재 날짜
+let ts = d.valueOf();
+console.log(d);
+console.log(ts);
+//boolean 1(true) or 0(false)로 바꿀 때는 조건연산자를 사용.
+let e = true;
+let n = e? 1 : 0;
+console.log(n);
+//문자열로 변환
+/**
+ * js의 모든 객체에는 문자열 표현을 반환하는 toString() 메소드가 있기는 있다.
+ * 하지만 그렇게 사용할 일이 생각보다 많지는 않다는게 함정.
+ * 일반적으로 데이터를 병합할때 숫자열도 문자열로 변환되는, 문자열 우선순위를 가지니까.
+ * Date 객체의 toString()메소드는 길어도 데이터는 재대로 나온다.
+ * Array의 toString() 메소드도 마찬가지고.
+ * Array.prototype.toString()은
+ * 각 요소를 문자열로 바꾼 다음 쉼표로 연결한 문자열을 반환한다.
+ * 
+ */
+let f = a.toString();
+console.log(f);
+console.log(typeof(f));
+let arr = [1,true, 'hello'];
+let g = arr.toString();
+console.log(g);
