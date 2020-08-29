@@ -124,3 +124,26 @@ console.log(typeof(f));
 let arr = [1,true, 'hello'];
 let g = arr.toString();
 console.log(g);
+let o = {
+  a:1
+};
+let p = o;
+o.a = 2;
+console.log(p);
+o = { //객체를 가리키는 변수는 그 객체를 가리키고 있을 뿐, 객체 자체는 아니다.
+  a:1 //이래도 p가 덩달아서 수정되지는 않음!
+};
+console.log(p); //보다시피 그대로 a:2
+console.log(o); //여기는 직접 할당이니 a:1
+
+// 변수와 객체는 일치하는것이 아님에 유의.(말 그대로 가리키는 것이다.)
+let q = {a:1};
+console.log(q === {a:1}); //분명 같은 객체처럼 보이나, false다.
+//참조를 전달하니 함수 내부에서 객체를 변경하면, 함수 외부에서도 바뀐다.
+
+function change_o(o){
+  o.a = 999;
+
+}
+change_o(o);
+console.log(o);
