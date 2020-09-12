@@ -65,3 +65,10 @@
  }
  funds = funds - totalBet;
  
+function rand(m,n){
+
+    let g= m + Math.floor((n-m+1));
+    console.log(g);
+    return g;
+}
+rand(1,6);
