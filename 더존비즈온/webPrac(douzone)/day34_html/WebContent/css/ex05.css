@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+#q1{
+	background-color: aqua;
+	
+}
+#q2{
+	width: 100px;
+	height: 100px;
+	background-color: #CF0;
+}
+#q3{
+	width: 60px;
+	height: 60px;
+	border: 4px solid black;
+	background-color: yellow;
+}
+#q4{
+	width: 100px;
+}
+

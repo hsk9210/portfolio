@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ex03_form</title>
+
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <!--get 전송방식: 글자수 제한 있음(255), 보안에 약한 편.-->
+        <form action="../jsp/result.jsp" method="GET">
+            search: <input type="text" name="query" id="query"> <br>
+            <input type="submit" value="login"> &nbsp;
+            <input type="reset" value="reset">
+            <!-- id: <input type="text" name="id"> <br>
+            password: <input type="password" name="pwd"> <br>
+            <input type="submit" value="login"> &nbsp;
+            <input type="reset" value="reset"> -->
+        </form>
+        &nbsp;
+        <form action="../jsp/result.jsp" method="POST">
+            id: <input type="text" name="id"> <br>
+            password: <input type="password" name="pwd"> <br>
+            <input type="submit" value="login"> &nbsp;
+            <input type="reset" value="reset">
+
+        </form>
+    </body>
+
+</html>

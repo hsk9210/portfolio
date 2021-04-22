@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>ex08_form_input / 입력</title>
+<link href="../css/ex08.css"  rel="stylesheet"  type="text/css">
+</head>
+<body>
+
+    <div class="header">
+        <h1 id="header1">회원가입 헤더.id:header1</h1>
+        <div class="wrapper1">
+            <div id="aside">
+            <h2>id:aside,h2</h2>
+            </div>
+            <span id="content1">
+            <h3>id:content1,h3</h3>
+            </span>
+        </div>
+        <br><br><br><br><br>
+    </div>
+
+    <div id="inputContainer1">
+        <form id="joinForm1" class="joinForm1" action="signup" method="POST"> <!-- action="" https://nid.naver.com/user2/V2Join?m=end -->
+
+        <!-- 아이디, 비밀번호 입력 -->
+        <!-- <div class="row_group">
+            <div class="join_row">
+                <h5 class="join_title"><label for="id">I D</label></h5>
+                <span class="ps_box int_id">
+                    <input type="text" id="id" name="id" class="int" title="ID" maxlength="20">
+                <span class="error_next_box" id="idMsg" style="display:none" aria-live="assertive"></span>
+            </div>
+
+            <div class="join_row">
+                <h5 class="join_title"><label for="pswd1">비밀번호</label></h5>
+                <span class="ps_box int_pass" id="pswd1Img">
+                    <input type="password" id="pswd1" name="pswd1" class="int" title="비밀번호 입력" aria-describedby="pswd1Msg" maxlength="20">
+                    <span class="lbl"><span id="pswd1Span" class="step_txt"></span></span>
+                </span>
+            </div>
+        </div> -->
+        <!-- // 아이디, 비밀번호 입력 -->
+        <br><br>
+
+        <div class="container">
+            <table padding="3">
+                <tr>
+                    <td>I D:&nbsp;</td>
+                    <td><input type="text" name="id1" id="id1" placeholder="아이디를 입력하세요" required="required"></td>
+                </tr>
+                <tr>
+                    <td>비밀번호:</td>
+                    <td><input type="password" name="pwd" id="pwd"> </td>
+                </tr>
+                <tr>
+                    <td>이름:  </td>
+                    <td><input type="text" name="name1" id="name1">  </td>
+                </tr>
+                <tr>
+                    <td>전화번호:</td>
+                    <td>
+                    <select>
+                        <option value="010">010</option>
+                        <option value="011">011</option>
+                        <option value="012">012</option>
+                        <option value="019">019</option>
+                    </select>
+                     -
+                    <input type="text" name="phonenum2" id="phonenum2"> - <input type="text" name="phonenum3" id="phonenum3">
+                    </td>
+                </tr>
+                <tr>
+                    <td>e-mail  </td>
+                    <td><input type="email">@
+                        <select>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="daum.net">daum.net</option>
+                        <option value="self">self</option>
+                        <input type="text" name="emailetc" id="emailetc">
+                    </select>  </td>
+                </tr>
+                <tr>
+                    <td>직업  </td>
+                    <td>
+                        <select>
+                            <option value="housewife">주부</option>
+                            <option value="student">학생</option>
+                            <option value="etc">기타</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>성별  </td>
+                    <td>
+                        <input type="radio" name="gender" value="F" checked="checked">여자
+                        <input type="radio" name="gender" value="M" >남자
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        주소
+                    </td>
+                    <td>
+                        <input type="text" name="zip" />&nbsp;
+                        <button type="button" onclick="openZipSearch()">검색</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                    <td>
+                        <input type="text" name="addr1" style="width:300px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        <input type="text" name="addr1" style="width:300px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        취미
+                    </td>
+                    <td>
+                        여행<input type="checkbox" name="travel" value="travel">
+                        독서<input type="checkbox" name="book" value="book">
+                        산책<input type="checkbox" name="walk" value="walk">                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        자기소개
+                    </td>
+                    <td>
+                        <div id="textarea1">
+                            <textarea rows="5" cols="50">자기소개 입력창 입니다.</textarea>
+                            <br>
+                        </div>                        
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td> 
+                        <!--  -->
+                    </td>
+                    <td> 
+                        <!-- style="width:80px; height:26px;" -->
+                    </td>
+                    <td> 
+                        <!-- style="width:80px; height:26px;" -->
+                    </td>
+                    <td>
+                        <input id="submitbtn1" type="submit" value="submit!" >
+                        <input id="resetbtn1" type="reset" value="reset!">
+                    </td>                        
+                </tr>
+            </table>
+                       
+            <br>
+           &nbsp;<br>
+            <br>
+            
+        </form>
+    </div>
+
+
+    <!-- <header id="header">
+        <h2>소제목 </h2>
+        <h3>강아지 입양하기</h3>
+    </header>
+    <a href="#">이 링크를 가리켜보세요.</a>
+    <article>
+        <h3>forever</h3>
+        <p class="content1">content1 is in view</p>
+    
+    </article>
+    <section>
+        <iframe src="ex03_form.html" width="60%" heights"150"></iframe>
+    </section>
+     
+     <nav class="navi">
+         <ul>
+            
+             <li><a href="#">애완견 종류</a> </li>
+             <li><a href="#">입양하기</a> </li>
+             <li><a href="#">건강돌보기</a> </li>
+             <li><a href="#">더불어 살기</a> </li>
+         </ul>
+     </nav>
+     <p>
+     <em class="b">
+      글자 넣었어요. 
+      </em>
+      </p>
+      
+     <br><br><hr>
+         <ul>
+             <li><a href="#">애완견 종류2</a> </li>
+             <li><a href="#">입양하기2</a> </li>
+             <li><a href="#">건강돌보기2</a> </li>
+             <li><a href="#">더불어 살기2</a> </li>
+         </ul>
+     <p>
+     <em>
+      글자 넣었어요. 글자 넣었어요. 글자 넣었어요. 
+      </em>
+      </p>
+      <footer>
+          <p>aaa &copy; by ksh92</p>
+          <a href="mailto:ksh@gmail.com">mailTo admin:ksh210@gmail.com</a><br>
+      </footer> -->
+
+
+</body>
+</html>

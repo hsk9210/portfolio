@@ -1,0 +1,48 @@
+.header #header1{
+    width: 800px;
+    margin: 0 auto;
+    background-color: red;
+}
+.header .wrapper1{
+    width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#aside{
+    width: 200px;
+    float: left;
+    background-color: blue;
+}
+#content1{
+    width: 600px;
+    float: left;
+    background-color: green;
+}
+
+#inputContainer1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: solid 1px gray; 
+    /* width: 300px; height: 160px; */
+    margin-left: -200px;
+    margin-top: -300px;
+
+    justify-content: center;
+    align-items: center;
+}
+#joinForm1{
+    justify-content: center;
+    align-items: center;
+
+}
+
+#phonenum2{
+    width: 10%;
+}
+#phonenum3{
+    width: 10%;
+}
+#submitresetbtndiv{
+    align-content: flex-end;
+}

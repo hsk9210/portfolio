@@ -1,0 +1,76 @@
+/*전체에 적용할 것.*/
+*{
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+/*body 태그 내부 적용할 스타일*/
+body {
+    display: flex;
+    /* 언급된 사항: 배치 적용.(현재는 중앙) */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+/*calendar 구역 전체 크기*/
+.calendar{
+    width: 600px;
+    margin: 50px;
+}
+/*머릿글.(not <head>)*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*년, 월*/
+.year,.month{
+    font-size: 20px;
+}
+/*네비(navi) 바*/
+.navi{
+    display: flex;
+    border: 1px solid rgb(28, 87, 72);
+    border-radius: 5px;
+}
+/*네비 버튼*/
+.navbtn{
+    width: 28px;
+    height: 30px;
+    font-size: 10px;
+    line-height: 34px;
+    background-color: azure;/*transparent;*/
+    cursor: pointer;
+}
+/*네비버튼중 가운데 오늘버튼만 border로 늘리자(안하면 글씨가 깨짐)*/
+.today{
+    width: 75px;
+    border-left: 1px;
+    border-right: 1px;
+}
+/*나머지는 날짜들에 대한 스타일시트.*/
+.days{
+    display: flex;
+    margin: 25px 0 10px;
+}
+.day{
+    width: calc(100%/7); /*각 요일이나 날짜나 다 7등분해서 크기지정.*/
+    text-align: center;
+}
+.dates{
+    display: flex;
+    flex-flow: row wrap;
+    height: 500px;
+    border-top: 1px solid rgb(62, 26, 131);
+    border-right: 1px solid rgb(207, 44, 44);
+}
+.date{
+    width: calc(100%/7);
+    padding: 15px;
+    text-align: right;
+    border-bottom: 1px solid rgb(209, 31, 156);
+    border-left: 1px solid rgb(25, 186, 250);
+}
+
+
+
+
