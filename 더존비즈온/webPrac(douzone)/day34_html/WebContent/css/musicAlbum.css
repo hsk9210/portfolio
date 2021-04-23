@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+h1{
+    text-align: center;
+}
+#albumcontainer{
+    margin-top: 20%;
+    margin-left: 30%;
+    align-self: center;
+    
+}

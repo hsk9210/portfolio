@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+</script>
+<script type="text/javascript">
+	$(function(){
+		let i=0;
+		let intval = setInterval(() => {
+			console.log("test"+(i++));
+			if(i>=10){
+				clearInterval(intval);
+			}
+		}, 1000);
+	});	
+</script>
+</head>
+<body>
+	<form action="test.jsp" method="post">
+		<label for="name1">
+			name한글: <input type="text" id="name1">
+		</label>
+		<label for="age1">
+			age: <input type="text" id="age1">
+		</label>
+		<br><br>
+		<fieldset>
+			<label for="p">Progress :</label>
+			<progress value="0.05" max="1" id="p"></progress>
+			<span>5</span>
+		</fieldset>
+		<input type="submit" value="send">		
+	</form>
+	
+</body>
+</html>
