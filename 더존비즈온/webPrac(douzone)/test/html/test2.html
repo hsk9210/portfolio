@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        
+    </head>
+    <body>
+        <button onclick="axiosThat()">axios!</button>
+        <div id="boom1"></div>
+
+
+        <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+            let a1 = document.querySelector('#boom1');
+            
+            
+            let imgStore;
+            //width="100" height="200"
+            function axiosThat() {
+                axios({
+                    method: 'GET',
+                    url: 'http://www.omdbapi.com/?apikey=a0d63a07&s=Frozen',
+                    //data: {}
+                })
+                .then((response) => {
+                    console.log(response);
+                    for(let i=0;i<response.data.Search.length;i++){
+                        let img1 = document.createElement("img");
+                        imgStore = "<img src='"+response.data.Search[i].Poster+"'"+" style= 'width:500px;height:300px'"+">";
+                        img1.src = response.data.Search[i].Poster;
+                        //a1.innerHTML = imgStore;
+                        //img1.innerHTML=response.data.Search[i].Poster;
+                        a1.appendChild(img1);
+                    }
+                }).catch((err) => {
+                    console.log(err);
+                });
+            }
+        </script>
+
+
+    </body>
+</html>

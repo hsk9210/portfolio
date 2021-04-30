@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ex27_js.html - export/import</title>
+
+    <!-- <script type="text/javascript" src="../js/main.js"></script> -->
+
+</head>
+
+<body>
+    json.test
+    <div id="a1"></div>
+
+    <button onclick="myMovies()">버튼 누르면 콘솔에 데이터 들어감.</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js">
+    </script>
+    <script>
+        function myMovies() {
+            
+            // Make a request for a user with a given ID
+            axios.get('http://www.omdbapi.com/?apikey=a0d63a07&s=Frozen')
+                .then(function (response) {
+                    // handle success
+                    //그냥 콘솔에다가 데이터 보내자...구차니즘.
+                    return console.log(response.data.Search);
+                })
+                // .then(function (myJson) {
+                //     console.log(JSON.stringify(myJson));
+                // });
+        }
+        //그냥 하단의 내용은 적용 안됨.(append 올리게 도움의 손길이...)
+        let a = document.querySelector("#a1");
+        let p1 = document.createElement("p");
+        p1.textContent = myMovies();
+        a.appendChild(p1);   
+    </script>
+</body>
+
+</html>
