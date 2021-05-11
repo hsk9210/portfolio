@@ -1,3 +1,9 @@
 node_modules
 public
 build
+App.css
+App.test.js
+index.css
+logo.svg
+reportWebVitals.js
+setupTests.js
