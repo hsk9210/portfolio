@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>props test</title>
+
+	
+</head>
+
+<body>
+	<div id="root">Hello React!!! </div>
+	<h1></h1>
+	<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+	<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+	
+	<script type="text/babel">
+		//{ message: 'this is props!!!' }
+		// function Component(props) {
+		// 	return(
+		// 		<div>
+		// 			<h1>{props.message} this is function component!! </h1>
+		// 		</div>
+		// 	);
+		// }
+
+		// Commonent.defaultProps = {
+		// 	message : 'basic props noValue',
+		// }
+
+		class Commonent extends React.Commonent {
+			//state = {	count: 0,	};
+			constructor(props){
+				super(props);
+				this.state = { count: 0 }
+			}
+
+			render(){
+				return(
+					<div>
+						<h1>{this.props.message} this is class type component!! </h1>
+						<p>{this.state.count}</p>
+					</div>
+				);
+			}
+
+			componentDidMount() {
+				setTimeout(() => {
+					// this.state.count = this.state.count + 1;
+					// this.setState({
+					// 	count: this.state.count + 1,
+					// });
+					this.setState((previousState) => {
+						const newState = { count: previousState.count + 1 }
+						return newState;
+					});
+				}, 1000);
+			}
+
+			static defaultProps = {
+				message: 'basic props',
+			};
+		}
+
+		ReactDOM.render(
+			<Component message='this is props!!!' />, 
+			<Component  />, 
+			document.querySelector('#root')
+		);
+	</script>
+	
+	<p>It works : props!</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
