@@ -1,0 +1,14 @@
+Servers
+.settings
+target
+src/test
+test
+node_modules
+public
+build
+/.metadata/
+log4j.xml
+.springBeans
+.project
+mvnv
+mvnv.cmd
