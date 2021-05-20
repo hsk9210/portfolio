@@ -1,8 +1,6 @@
 Servers
 .settings
 target
-src/test
-test
 node_modules
 public
 build
@@ -10,5 +8,7 @@ build
 log4j.xml
 .springBeans
 .project
-mvnv
-mvnv.cmd
+mvnw
+mvnw.cmd
+.mvn
+bin

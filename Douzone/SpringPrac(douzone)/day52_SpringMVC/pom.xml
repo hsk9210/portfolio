@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.test</groupId>
+	<groupId>org.douzone1</groupId>
 	<artifactId>controller</artifactId>
-	<name>day51_DI_JDBC</name>
+	<name>day52_SpringMVC</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -12,9 +12,11 @@
 		<org.springframework-version>5.0.7.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
-		
+		<!-- org.apache.maven.plugins가 아니고 여기다. 교재 오류 -->
+		<failOnMissingWebXml>false</failOnMissingWebXml>
 	</properties>
 	<dependencies>
+	
 		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -66,7 +68,6 @@
 		</dependency>
 		<!-- 끝 -->
 		
-			
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -85,13 +86,6 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-		<dependency> 
-			<groupId>org.springframework</groupId> 
-			<artifactId>spring-test</artifactId> 
-			<version>${org.springframework-version}</version> 
-		</dependency>
-		
-		
 				
 		<!-- AspectJ -->
 		<dependency>
@@ -121,7 +115,7 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
+			<version>1.2.15</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>
@@ -140,7 +134,7 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
-			<!-- <scope>runtime</scope> -->
+			<scope>runtime</scope>
 		</dependency>
 
 		<!-- @Inject -->
@@ -173,37 +167,16 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>4.7</version>
 			<scope>test</scope>
 		</dependency>        
-		        
 	</dependencies>
     <build>
-    	
         <plugins>
-        
             <plugin>
                 <artifactId>maven-eclipse-plugin</artifactId>
                 <version>2.9</version>
                 <configuration>
-                	
-                	<annotationProcessorPaths>
-                        <annotationProcessorPath>
-                            <groupId>org.projectlombok</groupId>
-                            <artifactId>lombok</artifactId>
-                            <version>${lombok.version}</version>
-                        </annotationProcessorPath>
-                        <path>
-                            <groupId>org.mapstruct</groupId>
-                            <artifactId>mapstruct-processor</artifactId>
-                            <version>${mapstruct.version}</version>
-                        </path>
-                    </annotationProcessorPaths>
-                    <compilerArguments>
-                        <AaddGeneratedAnnotation>false</AaddGeneratedAnnotation>
-                        <Adebug>true</Adebug>
-                    </compilerArguments>
-                    
                     <additionalProjectnatures>
                         <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
                     </additionalProjectnatures>
@@ -212,6 +185,7 @@
                     </additionalBuildcommands>
                     <downloadSources>true</downloadSources>
                     <downloadJavadocs>true</downloadJavadocs>
+                   
                 </configuration>
             </plugin>
             <plugin>
@@ -224,6 +198,7 @@
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
+                    
                 </configuration>
             </plugin>
             <plugin>
