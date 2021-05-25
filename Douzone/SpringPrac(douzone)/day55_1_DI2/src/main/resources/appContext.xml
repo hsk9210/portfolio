@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
+
+	<bean id="MessageBeanImpl" name="msgbin" class="ex05.springDI.MessageBeanImpl">
+	    <!--        <bean p:name="" p:greeting=""></bean>
+		<constructor-arg><value>제네릭 리순신</value></constructor-arg>
+		<constructor-arg value="인사말 1."></constructor-arg> -->
+		<property name="name" value="김연아"></property>
+		<property name="greeting" value="하이, "></property>
+	</bean>
+		
+	<bean id="NewRecode" name="record" class="ex04.springDI.NewRecode">
+		<constructor-arg><value>99</value></constructor-arg>
+		<constructor-arg value="60"></constructor-arg>
+		<constructor-arg value="94"></constructor-arg>
+	</bean>
+	<bean id="view" class="ex04.springDI.NewCodeView">
+		<property name="recode" ref="NewRecode"></property>
+	</bean>
+
+
+</beans>
