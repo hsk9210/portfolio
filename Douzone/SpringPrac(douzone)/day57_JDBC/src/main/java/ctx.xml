@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- ctx.xml -->
+
+	<bean id="student" class="ex04.aop.work.Student" />	
+	<bean id="logPrintAroundAdvice" class="ex04.aop.work.LogPrintAroundAdvice" />	
+	
+	<bean id="proxy1" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<list>
+				<value>ex04.aop.work.InterfaceOfOutput</value>
+			</list>
+		</property>
+		<property name="target" ref="student"></property>
+		<property name="interceptorNames">   <!-- 보조관심사 -->
+			<list>
+				<value>logPrintAroundAdvice</value>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="officer" class="ex04.aop.work.Officer" />		
+	<bean id="proxy2" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<list>
+				<value>ex04.aop.work.InterfaceOfOutput</value>
+			</list>
+		</property>
+		<property name="target" ref="officer"></property>
+		<property name="interceptorNames">   <!-- 보조관심사 -->
+			<list>
+				<value>logPrintAroundAdvice</value>
+			</list>
+		</property>
+	</bean>
+		 
+
+</beans>
+
+
+
+
+
+
+
+
+

@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.hsk9210</groupId>
-	<artifactId>auth1</artifactId>
-	<name>day54_2</name>
+	<artifactId>controller</artifactId>
+	<name>day57_myBatis</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -14,7 +14,6 @@
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 	<dependencies>
-		
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -118,25 +117,9 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.oracle.database.jdbc</groupId>
-			<artifactId>ojdbc8</artifactId>
-			<version>21.1.0.0</version>
-		</dependency>
-		<dependency>
 			<groupId>org.mybatis</groupId>
-			<artifactId>mybatis-spring</artifactId>
-			<version>2.0.6</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-rest-core</artifactId>
-			<version>2.1.0.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-core</artifactId>
-			<version>2.3.3</version>
-			
+			<artifactId>mybatis</artifactId>
+			<version>3.5.7</version>
 		</dependency>
 	</dependencies>
     <build>
