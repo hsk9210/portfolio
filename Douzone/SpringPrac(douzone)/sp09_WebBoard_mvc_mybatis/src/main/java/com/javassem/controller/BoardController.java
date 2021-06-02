@@ -19,7 +19,8 @@ public class BoardController {
 	
 	@Autowired
 	private BoardService boardService;
-
+	
+		
 		//
 		@RequestMapping("/{step}.do")
 		public String viewPage(@PathVariable String step) {
