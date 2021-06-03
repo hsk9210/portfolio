@@ -1,4 +1,4 @@
-package org.hsk9210.controller;
+package com.hsk9210.controller;
 
 import java.text.DateFormat;
 import java.util.Date;
