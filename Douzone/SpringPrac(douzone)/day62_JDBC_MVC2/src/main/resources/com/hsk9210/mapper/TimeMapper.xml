@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hsk9210.mapper.TimeMapper">
+	
+	<!-- crud id의 값은 mapper package의 각 .java파일 내부 메소드 이름과 동일해야 호출이 된다.  -->
+	<select id="getTime2" resultType="string">
+		select sysdate from dual
+	</select>	
+
+</mapper>
