@@ -16,7 +16,7 @@ public class SampleController {
 	
 	@RequestMapping(value = "/page1", method = RequestMethod.GET)
 	public String home() {
-		log.info("/samplepage/page1 redirect");
+		log.info("url sample/page1 --> /samplepage/page1 redirect");
 		return "/samplepage/page1";
 	}
 	
