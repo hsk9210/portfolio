@@ -12,3 +12,5 @@ mvnw
 mvnw.cmd
 .mvn
 bin
+lib
+.idea
