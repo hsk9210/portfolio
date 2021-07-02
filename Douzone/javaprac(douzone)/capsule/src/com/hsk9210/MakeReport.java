@@ -9,5 +9,13 @@ public class MakeReport {
         buffer.append(title);
         buffer.append(line);
     }
-    
+    private void genbody(){
+        buffer.append("james \t  ");
+    }
+    public String getreport(){
+        makeHeader();
+        genbody();
+        return buffer.toString();
+    }
+
 }
